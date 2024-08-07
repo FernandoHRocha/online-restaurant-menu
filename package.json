@@ -1,0 +1,22 @@
+{
+  "name": "online-restaurant-menu",
+  "version": "1.0.0",
+  "description": "case study developing a for digital menu using astro framework",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/FernandoHRocha/online-restaurant-menu.git"
+  },
+  "keywords": [
+    "astro"
+  ],
+  "author": "Fernando H. Rocha",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/FernandoHRocha/online-restaurant-menu/issues"
+  },
+  "homepage": "https://github.com/FernandoHRocha/online-restaurant-menu#readme"
+}
