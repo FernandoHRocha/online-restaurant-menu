@@ -1,0 +1,39 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+
+  .no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+}
+
+:root {
+  scroll-behavior: smooth;
+  color: aliceblue;
+  font-family: "Arsenal SC", sans-serif;
+  font-size: 1.3rem;
+}
+
+.handlee {
+  font-family: "Great Vibes", cursive;
+}
+
+.poppins {
+  font-family: "Poppins", sans-serif;
+}
+
+.arsenal {
+  font-family: "Arsenal SC", sans-serif;
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
