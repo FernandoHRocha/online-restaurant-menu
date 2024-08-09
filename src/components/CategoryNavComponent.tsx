@@ -5,6 +5,7 @@ import { useEffect } from "react"
 export default function CategoryNavComponent() {
 
     const selectedStyle: string[] = ["bg-amber-400", "text-slate-800", "font-bold"]
+    const idleStyle: string[] = ["bg-red-800"]
     let categoryIndex = 0
     let scroller: Element
     let oldItem: Element
@@ -50,6 +51,11 @@ export default function CategoryNavComponent() {
     }
 
     function changeStyles(menuElement: Element) {
+        idleStyle.forEach((style) => {
+            menuElement.classList.remove(style)
+            oldItem.classList.add(style)
+        })
+
         selectedStyle.forEach((style) => {
             menuElement.classList.add(style)
             oldItem.classList.remove(style)

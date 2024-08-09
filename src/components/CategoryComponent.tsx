@@ -9,7 +9,7 @@ const CategoryComponent = ({
 ) => {
   return (
     <div
-      className="scroll-mt-10 pt-6 mb-20"
+      className="scroll-mt-14 pt-6 mb-20"
       id={children.nome}
     >
       <h2 className="handlee text-6xl text-yellow-400 ">{children.nome}</h2>
