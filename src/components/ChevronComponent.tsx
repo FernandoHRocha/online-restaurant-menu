@@ -1,9 +1,14 @@
-const ChevronComponent = ({rotate} : {rotate?: "right" | "left" | "up"}) => {
-    const rotateClass = rotate == "right" ? "-rotate-90" : 
-                        rotate == "left" ? "rotate-90" :
-                        rotate == "up" ? "rotate-180" : ""
+const ChevronComponent = ({
+    rotate, className
+}: {
+    rotate?: "right" | "left" | "up",
+    className?: string
+}) => {
+    const rotateClass = rotate == "right" ? "-rotate-90" :
+        rotate == "left" ? "rotate-90" :
+            rotate == "up" ? "rotate-180" : ""
     return (
-        <svg className={"w-6 "+rotateClass} viewBox="6 8 12 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <svg className={"scale-75 w-6 z-20 pointer-events-none " + rotateClass + " " + className} viewBox="6 8 12 8" fill="none" xmlns="http://www.w3.org/2000/svg">
             <g id="SVGRepo_bgCarrier" strokeWidth="0"></g>
             <g id="SVGRepo_tracerCarrier" strokeLinecap="round" strokeLinejoin="round"></g>
             <g id="SVGRepo_iconCarrier">

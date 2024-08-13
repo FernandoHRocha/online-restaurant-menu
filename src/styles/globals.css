@@ -14,10 +14,14 @@
 }
 
 :root {
-  scroll-behavior: smooth;
   color: aliceblue;
   font-family: "Arsenal SC", sans-serif;
-  font-size: 1.3rem;
+}
+
+p {
+  font-size: 0.95rem;
+  line-height: 24px;
+  font-family: "Poppins";
 }
 
 .handlee {
@@ -30,10 +34,4 @@
 
 .arsenal {
   font-family: "Arsenal SC", sans-serif;
-}
-
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
 }

@@ -25,8 +25,11 @@ export default function Home() {
       <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
       <link href="https://fonts.googleapis.com/css2?family=Arsenal+SC&family=Great+Vibes&family=Poppins&display=swap" rel="stylesheet"></link>
     </Head>
-    <main>
-      <CategoryNavComponent></CategoryNavComponent>
+    <CategoryNavComponent></CategoryNavComponent>
+    <main className="
+      2xl:max-w-[1536px] 2xl:mx-auto
+      mx-2
+      ">
       {menuCategories.map((category, ic) => {
         return (
           <CategoryComponent key={'category'+ic}>{category}</CategoryComponent>

@@ -5,11 +5,11 @@ export default function Document() {
   return (
     <Html lang="en">
       <Head />
-      <body className="bg-neutral-800">
+      <body className="bg-orange-950">
         <Main />
         <NextScript />
+        <FooterComponent></FooterComponent>
       </body>
-      <FooterComponent></FooterComponent>
     </Html>
   );
 }

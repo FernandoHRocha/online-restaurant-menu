@@ -9,10 +9,11 @@ const CategoryComponent = ({
 ) => {
   return (
     <div
-      className="scroll-mt-14 pt-6 mb-20"
+      className="scroll-mt-10 pt-6 mb-20"
       id={children.nome}
     >
-      <h2 className="handlee text-6xl text-yellow-400 ">{children.nome}</h2>
+      <h2 className="handlee text-4xl text-center text-yellow-400 ">{children.nome}</h2>
+      <hr className="mb-1 w-3/4 mx-auto"/>
       {
         children.items?.map((item, i) => {
           return (
