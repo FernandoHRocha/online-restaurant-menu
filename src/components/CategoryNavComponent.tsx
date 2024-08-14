@@ -9,13 +9,57 @@ export default function CategoryNavComponent() {
     const idleStyle: string[] = ["bg-red-800"]
     let categoryIndex = 0
     let scroller: Element
-    let oldItem: Element
+    let scrollerElements: Element[]
+    let categoryTitles: Element[]
+    let viewportHeight: number = 100
 
     useEffect(() => {
-        scroller = document.getElementById("menu-scroller") as Element
-        oldItem = document.getElementById("menu-" + categoryIndex) as Element
+        getElements()
+
+        addEventListener('resize', getViewportHeight)
+        getViewportHeight()
+        let oldItem = document.getElementById("menu-" + categoryIndex) as Element
         changeStyles(oldItem)
+
+        buildIntersectionObservers()
     })
+
+    function getElements() {
+        scroller = document.getElementById("menu-scroller") as Element
+        scrollerElements = Array.from(document.getElementsByTagName("li")) as Element[]
+        categoryTitles = Array.from(document.getElementsByClassName("category-title")) as Element[]
+    }
+
+    function getViewportHeight() {
+        viewportHeight = Math.max(document.documentElement.clientHeight || 0, window.innerHeight || 0)
+    }
+
+    function buildIntersectionObservers() {
+        const observer = new IntersectionObserver(entries => {
+            entries.forEach(element => {
+                const intersectingCategory = element.target.parentElement?.getAttribute('id')
+                if(element.isIntersecting) {
+                    Object.values(categoriesMock).forEach((category, i) => {
+                        if(category.nome == intersectingCategory) {
+                            categoryIndex = i
+                            scrollToElement(false)
+                        }
+                    })
+                } else {
+                    if(element.boundingClientRect.top > (viewportHeight/2)) {
+                        if(intersectingCategory == categoriesMock[categoryIndex].nome) {
+                            categoryIndex--
+                            scrollToElement(false)
+                        }
+                    }
+                }
+            })
+        }, {threshold: [0, 1], rootMargin: "0px 0px -50% 0px"})
+
+        categoryTitles.forEach(element => {
+            observer.observe(element)
+        })
+    }
 
     function scrollToRight() {
         categoryIndex = (categoryIndex >= (Object.values(categoriesMock).length - 1)) ? 0 : (categoryIndex + 1)
@@ -32,7 +76,7 @@ export default function CategoryNavComponent() {
         scrollToElement()
     }
 
-    function scrollToElement() {
+    function scrollToElement(scrollPage: boolean = true) {
         const menuElement = document.getElementById("menu-" + categoryIndex)
         if (!menuElement) return
 
@@ -42,7 +86,9 @@ export default function CategoryNavComponent() {
 
         const offsetLeft = Math.round(menuRect.left + (menuRect.width / 2)) - (scrollerRect.left + (scrollerRect.width / 2))
 
-        window.location.href = "#" + Object.values(categoriesMock)[categoryIndex].nome
+        if(scrollPage) {
+            window.location.href = "#" + Object.values(categoriesMock)[categoryIndex].nome
+        }
 
         if (offsetLeft > 50 || offsetLeft < -50) {
             scroller.scrollBy({
@@ -57,18 +103,24 @@ export default function CategoryNavComponent() {
     }
 
     function changeStyles(menuElement: Element) {
+        scrollerElements.forEach(element => {
+            idleStyle.forEach((style) => {
+                if (element != menuElement) {
+                    element.classList.add(style)
+                }
+            })
+            selectedStyle.forEach((style) => {
+                element.classList.remove(style)
+            })
+        });
+
         idleStyle.forEach((style) => {
             menuElement.classList.remove(style)
-            if (oldItem != menuElement) {
-                oldItem.classList.add(style)
-            }
         })
-
+        
         selectedStyle.forEach((style) => {
-            oldItem.classList.remove(style)
             menuElement.classList.add(style)
         })
-        oldItem = menuElement
     }
 
     return (
