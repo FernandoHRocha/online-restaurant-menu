@@ -1,11 +1,11 @@
 export default function FooterComponent() {
     return (
         <footer className="
-            bottom-0 sticky py-2 h-fit w-100 bg-zinc-800 flex justify-center items-center
+            bottom-0 fixed h-fit w-screen bg-zinc-800 flex justify-center items-center
         ">
-            <h1 className="
+            <a href="https://beta.nandorocha.com.br" className="
                 text-xl 
-            ">Fer<b>nando Rocha</b></h1>
+            ">Fer<b>nando Rocha</b></a>
         </footer>
     )
 }
