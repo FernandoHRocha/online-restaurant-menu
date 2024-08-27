@@ -4,111 +4,154 @@
         "nome": "Salada Caesar",
         "descricao": "Uma salada clássica feita com alface romana crocante, croutons caseiros crocantes, lascas de queijo parmesão e um molho Caesar cremoso à base de alho, anchovas e suco de limão. Perfeita para começar a refeição com um toque de frescor e sabor.",
         "categoria_id": 1,
-        "preco": 15.00
+        "preco": 15.00,
+        "imageUrl" : "https://restaurant-menu-photos.s3.sa-east-1.amazonaws.com/salada-caesar.webp"
+
     },
     {
         "id": 2,
         "nome": "Bruschetta",
         "descricao": "Fatias de pão italiano levemente tostado, cobertas com uma mistura de tomates frescos picados, manjericão fresco, alho, azeite de oliva extra virgem e um toque de vinagre balsâmico. Uma entrada simples e deliciosa que captura os sabores da Itália.",
         "categoria_id": 1,
-        "preco": 12.00
+        "preco": 12.00,
+        "imageUrl" : "https://restaurant-menu-photos.s3.sa-east-1.amazonaws.com/bruschetta.webp"
+
     },
     {
         "id": 3,
         "nome": "Sopa do Dia",
         "descricao": "Uma sopa preparada diariamente com ingredientes frescos e sazonais. Consulte o garçom para saber qual a opção de sopa fresca disponível hoje, que pode variar desde uma sopa de legumes leve e nutritiva até uma sopa cremosa e reconfortante.",
         "categoria_id": 1,
-        "preco": 10.00
+        "preco": 10.00,
+        "imageUrl" : "https://restaurant-menu-photos.s3.sa-east-1.amazonaws.com/sopa-do-dia.webp"
+
     },
     {
         "id": 4,
         "nome": "Filé Mignon",
         "descricao": "Um suculento filé mignon grelhado, servido com um delicioso molho de vinho tinto reduzido, acompanhado de um cremoso purê de batata e legumes salteados na manteiga. Este prato é uma perfeita combinação de sabores ricos e texturas, ideal para os amantes de carne.",
         "categoria_id": 2,
-        "preco": 45.00
+        "preco": 45.00,
+        "imageUrl" : "https://restaurant-menu-photos.s3.sa-east-1.amazonaws.com/file-mignon.webp"
     },
     {
         "id": 5,
         "nome": "Salmão Grelhado",
         "descricao": "Filé de salmão grelhado até a perfeição, temperado com ervas frescas e servido com um molho leve de ervas. Acompanhado de arroz selvagem e aspargos tenros, este prato oferece uma refeição equilibrada e saudável, cheia de sabor e frescor.",
         "categoria_id": 2,
-        "preco": 40.00
+        "preco": 40.00,
+        "imageUrl" : "https://restaurant-menu-photos.s3.sa-east-1.amazonaws.com/salmao-grelhado.webp"
     },
     {
         "id": 6,
         "nome": "Risoto de Cogumelos",
         "descricao": "Um risoto cremoso preparado com uma seleção de cogumelos selvagens, queijo parmesão ralado na hora e um toque de vinho branco. Este prato vegetariano é rico em sabor e oferece uma experiência gastronômica sofisticada e reconfortante.",
         "categoria_id": 2,
-        "preco": 35.00
+        "preco": 35.00,
+        "imageUrl" : "https://restaurant-menu-photos.s3.sa-east-1.amazonaws.com/risoto-de-cogumelos.webp"
+    },
+    {
+        "id": 13,
+        "nome": "Frango à Parmegiana",
+        "descricao": "Peito de frango empanado e frito até ficar dourado e crocante, coberto com molho de tomate caseiro e uma camada generosa de queijo derretido. Servido com arroz branco e batatas fritas crocantes, este clássico prato é reconfortante e satisfatório.",
+        "categoria_id": 2,
+        "preco": 30.00,
+        "imageUrl" : "https://restaurant-menu-photos.s3.sa-east-1.amazonaws.com/frango-parmegiana.webp"
+    },
+    {
+        "id": 14,
+        "nome": "Costela ao Molho Barbecue",
+        "descricao": "Costela de porco assada lentamente até ficar macia e suculenta, coberta com um molho barbecue caseiro. Servida com purê de batata doce e espiga de milho grelhada, este prato oferece uma combinação deliciosa de sabores doces e defumados.",
+        "categoria_id": 2,
+        "preco": 42.00,
+        "imageUrl" : "https://restaurant-menu-photos.s3.sa-east-1.amazonaws.com/costela-barbecue.webp"
+    },
+    {
+        "id": 15,
+        "nome": "Bacalhau à Lagareiro",
+        "descricao": "Lombo de bacalhau assado no forno, acompanhado de batatas ao murro, cebolas caramelizadas e regado com azeite extra virgem. Este prato tradicional português é uma celebração dos sabores mediterrâneos e oferece uma experiência rica e autêntica.",
+        "categoria_id": 2,
+        "preco": 48.00,
+        "imageUrl" : "https://restaurant-menu-photos.s3.sa-east-1.amazonaws.com/bacalhau.webp"
     },
     {
         "id": 7,
         "nome": "Spaghetti Carbonara",
         "descricao": "Tradicional prato italiano feito com spaghetti al dente, envolvido em um molho cremoso de ovos, queijo parmesão ralado na hora, e pedacinhos crocantes de bacon. Finalizado com uma generosa pitada de pimenta preta moída na hora, este prato é um verdadeiro conforto gastronômico.",
         "categoria_id": 3,
-        "preco": 25.00
+        "preco": 25.00,
+        "imageUrl" : "https://restaurant-menu-photos.s3.sa-east-1.amazonaws.com/carbonara.webp"
     },
     {
         "id": 8,
         "nome": "Lasanha à Bolonhesa",
         "descricao": "Camadas de massa fresca intercaladas com um rico molho à bolonhesa, feito de carne moída de alta qualidade, tomates maduros e especiarias aromáticas. Coberta com uma generosa quantidade de queijo derretido, esta lasanha é assada até borbulhar e dourar, oferecendo uma refeição saborosa e satisfatória.",
         "categoria_id": 3,
-        "preco": 28.00
+        "preco": 28.00,
+        "imageUrl" : "https://restaurant-menu-photos.s3.sa-east-1.amazonaws.com/bolonhesa.webp"
     },
     {
         "id": 9,
         "nome": "Ravioli de Ricota e Espinafre",
         "descricao": "Delicados raviolis recheados com uma mistura cremosa de ricota fresca e espinafre, servidos com um molho de tomate fresco feito na casa. Este prato combina a suavidade do queijo com a leveza do espinafre e o sabor vibrante dos tomates, proporcionando uma experiência culinária deliciosa e equilibrada.",
         "categoria_id": 3,
-        "preco": 27.00
+        "preco": 27.00,
+        "imageUrl" : "https://restaurant-menu-photos.s3.sa-east-1.amazonaws.com/ravioli.webp"
     },
     {
         "id": 10,
         "nome": "Tiramisu",
         "descricao": "Tradicional sobremesa italiana composta por camadas de biscoitos de champagne embebidos em café expresso forte, intercaladas com um creme suave de mascarpone e polvilhadas com cacau em pó. Cada mordida oferece uma harmonia perfeita de sabores ricos e texturas macias, tornando-se uma sobremesa irresistível para os amantes de café e doces.",
         "categoria_id": 4,
-        "preco": 18.00
+        "preco": 18.00,
+        "imageUrl" : "https://restaurant-menu-photos.s3.sa-east-1.amazonaws.com/tiramisu.webp"
     },
     {
         "id": 11,
         "nome": "Cheesecake de Frutas Vermelhas",
         "descricao": "Cheesecake cremoso feito com cream cheese de alta qualidade, sobre uma base crocante de biscoitos, coberto com uma calda artesanal de frutas vermelhas frescas. A combinação de texturas e o sabor levemente ácido das frutas equilibram a doçura da sobremesa, proporcionando uma experiência deliciosa e refrescante.",
         "categoria_id": 4,
-        "preco": 20.00
+        "preco": 20.00,
+        "imageUrl" : "https://restaurant-menu-photos.s3.sa-east-1.amazonaws.com/cheesecake.webp"
     },
     {
         "id": 12,
         "nome": "Sorvete Artesanal",
         "descricao": "Variedade de sabores de sorvete artesanal, feito com ingredientes naturais e frescos. Consulte o garçom para saber as opções do dia, que podem incluir sabores clássicos como baunilha e chocolate, além de opções sazonais e inovadoras. Cada bola de sorvete oferece uma textura cremosa e um sabor intenso.",
         "categoria_id": 4,
-        "preco": 15.00
+        "preco": 15.00,
+        "imageUrl" : "https://restaurant-menu-photos.s3.sa-east-1.amazonaws.com/sorvete.webp"
     },
     {
         "id": 13,
         "nome": "Vinhos",
         "descricao": "Selecione entre nossa vasta carta de vinhos tintos, brancos e rosés.",
         "categoria_id": 5,
-        "preco": 23.00
+        "preco": 23.00,
+        "imageUrl" : "https://restaurant-menu-photos.s3.sa-east-1.amazonaws.com/vinhos.webp"
     },
     {
         "id": 14,
         "nome": "Cervejas Artesanais",
         "descricao": "Diversas opções de cervejas artesanais locais e importadas.",
         "categoria_id": 5,
-        "preco": 14.00
+        "preco": 14.00,
+        "imageUrl" : "https://restaurant-menu-photos.s3.sa-east-1.amazonaws.com/cerveja.webp"
     },
     {
         "id": 15,
         "nome": "Cocktails",
         "descricao": "Mojito, Caipirinha, Margarita, entre outros.",
         "categoria_id": 5,
-        "preco": 16.00
+        "preco": 16.00,
+        "imageUrl" : "https://restaurant-menu-photos.s3.sa-east-1.amazonaws.com/cocktails.webp"
     },
     {
         "id": 16,
         "nome": "Refrigerantes e Sucos",
         "descricao": "Coca-Cola, Sprite, sucos naturais de laranja, limão, maracujá, entre outros.",
         "categoria_id": 5,
-        "preco": 7.00
+        "preco": 7.00,
+        "imageUrl" : "https://restaurant-menu-photos.s3.sa-east-1.amazonaws.com/sucos.webp"
     }
 ]
