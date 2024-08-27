@@ -26,7 +26,7 @@ export default function CategoryNavComponent() {
 
     function getElements() {
         scroller = document.getElementById("menu-scroller") as Element
-        scrollerElements = Array.from(document.getElementsByTagName("li")) as Element[]
+        scrollerElements = Array.from(document.getElementsByClassName("menu-item-li")) as Element[]
         categoryTitles = Array.from(document.getElementsByClassName("category-title")) as Element[]
     }
 
@@ -47,7 +47,7 @@ export default function CategoryNavComponent() {
                     })
                 } else {
                     if(element.boundingClientRect.top > (viewportHeight/2)) {
-                        if(intersectingCategory == categoriesMock[categoryIndex].nome) {
+                        if(intersectingCategory == categoriesMock[categoryIndex]?.nome) {
                             categoryIndex--
                             scrollToElement(false)
                         }
@@ -115,18 +115,20 @@ export default function CategoryNavComponent() {
         });
 
         idleStyle.forEach((style) => {
-            menuElement.classList.remove(style)
+            if(menuElement)
+                menuElement.classList.remove(style)
         })
         
         selectedStyle.forEach((style) => {
-            menuElement.classList.add(style)
+            if(menuElement)
+                menuElement.classList.add(style)
         })
     }
 
     return (
 
-        <header className="top-0 w-full sticky h-fit bg-stone-900 py-1">
-            <ButtonRoundedComponent event={scrollToLeft} className="absolute top-2 left-1">
+        <header className="top-0 z-50 w-full sticky h-fit bg-stone-900 py-1">
+            <ButtonRoundedComponent event={scrollToLeft} className="p-2 flex justify-center items-center absolute top-2 left-1 aspect-square">
                 <ChevronComponent rotate="left" className=""></ChevronComponent>
             </ButtonRoundedComponent>
             <nav id="menu-scroller" className="z-10 whitespace-nowrap rounded-3xl overflow-x-scroll snap-x snap-mandatory no-scrollbar bg-black py-1 mx-14 w-auto border-2 border-neutral-500">
@@ -136,21 +138,21 @@ export default function CategoryNavComponent() {
                     ">
                     {categoriesMock.map((category, i) => {
                         return (
-                            <li id={"menu-" + i} onClick={() => selectCategory(i)} key={'menu-' + i} className="
+                            <ButtonRoundedComponent id={"menu-" + i} event={() => selectCategory(i)} key={'menu-' + i} className="
+                            menu-item-li
                             sm:min-w-40
                             xl:min-w-60
-                            z-10 inline-block snap-center w-fit min-w-20 rounded-3xl mx-2 bg-red-800
-                            hover:bg-amber-400 hover:text-slate-800 hover:font-bold hover:cursor-pointer
+                            mx-2 snap-center
                             ">
                                 <a className="text-lg select-none flex justify-center items-center py-1 px-4">
                                     {category.nome}
                                 </a>
-                            </li>
+                            </ButtonRoundedComponent>
                         )
                     })}
                 </div>
             </nav>
-            <ButtonRoundedComponent event={scrollToRight} className="absolute top-2 right-1">
+            <ButtonRoundedComponent event={scrollToRight} className="p-2 flex justify-center items-center absolute top-2 right-1 aspect-square">
                 <ChevronComponent rotate="right" className=""></ChevronComponent>
             </ButtonRoundedComponent>
         </header>

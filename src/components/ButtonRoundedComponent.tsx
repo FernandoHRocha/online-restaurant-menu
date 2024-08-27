@@ -1,7 +1,10 @@
 const ButtonRoundedComponent = (props: any) => {
 
     return (
-        <button onClick={props.event} className={"z-50 cursor-pointer p-2 bg-black flex justify-center items-center min-w-fit min-h-fit aspect-square border-white border rounded-full " + props.className}>
+        <button
+            id={props.id}
+            onClick={props.event}
+            className={"w-fit hover:bg-amber-400 hover:text-slate-800 hover:font-bold hover:cursor-pointer bg-red-800 min-w-fit min-h-fit border-white border rounded-full " + props.className}>
             {props.children}
         </button>
     )
