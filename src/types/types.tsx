@@ -10,4 +10,5 @@ export interface Item {
     descricao: string
     preco: number
     categoria_id: number
+    imageUrl: string|undefined
 }
