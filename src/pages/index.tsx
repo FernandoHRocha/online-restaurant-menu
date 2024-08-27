@@ -20,11 +20,6 @@ export default function Home() {
 
   return (
     <>
-    <Head>
-      <link rel="preconnect" href="https://fonts.googleapis.com" />
-      <link rel="preconnect" href="https://fonts.gstatic.com"/>
-      <link href="https://fonts.googleapis.com/css2?family=Arsenal+SC&family=Great+Vibes&family=Poppins&display=swap" rel="stylesheet"></link>
-    </Head>
     <CategoryNavComponent></CategoryNavComponent>
     <main className="
       2xl:max-w-[1536px] 2xl:mx-auto
